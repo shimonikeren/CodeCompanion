@@ -1,0 +1,18 @@
+body { 
+    background-image: url("code.jpeg");
+    height: 100%; 
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    border: 1px dotted grey;
+    margin: 100px;
+    color: grey;
+    text-align: center;
+}
+
+.btn {
+    border-radius: 0;
+  }
