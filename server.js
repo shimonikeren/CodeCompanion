@@ -1,34 +1,22 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
+//----------------------DEPENDENCIES----------------------
+var express = require("express");
+var bodyParser = require("body-parser");
 
+//-----------------CREATE EXPRESS SERVER -----------------
 var app = express();
 
-var PORT = process.env.PORT || 3000;
+//------------------------PORT----------------------------
+var PORT = process.env.PORT || 8080;
 
-// Sets up the Express app to handle data parsing
+//----------------- SET UP DATA PARSING ------------------
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// display html pages 
-app.get("/home", function(req, res) {
-    res.sendFile(path.join(__dirname, "/app/public/home.html"));
-});
-    
-app.get('/survey', (req, res)=>{
-    res.sendFile(path.join(__dirname, '/app/public/survey.html'));
-});
+//------------------------ROUTER---------------------------
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
-//10 survey questions 
-//user takes survey. response saved as numbers. use that data for 
-//compatability logic equation 
-//then, choose best match based off equation
-//display pic and name to screen (modal popup)
-
-
-
-
-
+//----------------------LISTENER---------------------------
 app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+  console.log("App listening on PORT: " + PORT);
+});

@@ -1,18 +1,10 @@
-//this file holds objects for each survey taker 
-//survey info as an array of objects
-// {
-//     "name":"Ahmed",
-//     "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-//     "scores":[
-//         5,
-//         1,
-//         4,
-//         4,
-//         5,
-//         1,
-//         2,
-//         5,
-//         4,
-//         1
-//       ]
-//   }
+//-----------------------DATA-------------------------
+/*this file holds objects for each survey taker 
+survey info as an array of objects to be formatted as follows:
+var user1 = [{q1: "", q2: "", q3: "", q4: "", q5: "", q6: "",q7: "", q8: "", q9: "", q10: ""}]; */
+   
+//----------------Star with empty array---------------
+var codeBuddies = [];
+
+module.exports = codeBuddies;
+  

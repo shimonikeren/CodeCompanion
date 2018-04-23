@@ -1,18 +1,23 @@
 body { 
     background-image: url("code.jpeg");
     height: 100%; 
-    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .mainDiv {
     border: 1px dotted grey;
-    margin: 100px;
+    margin-top: 80px;
     color: grey;
     text-align: center;
+    padding: 20px;
 }
 
-.eachQuestion {
-    border: 1px dotted grey;
+.btn {
+    border-radius: 0;
+  }
+
+
+.question {
+    padding: 2px;
 }
