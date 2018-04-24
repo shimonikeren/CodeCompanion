@@ -9,20 +9,13 @@ var codeBuddies = require("../data/friends"); //is this correct path?
 
 
 module.exports = function(app) {
-    // API GET Requests
-    // Below code handles when users "visit" a page.
-    // In each of the below cases when a user visits a link, they are shown a JSON of the data in the table)
-    // ---------------------------------------------------------------------------
+    // API GET Requests-- when users "visit" a page.--show JSON 
     app.get("/api/friends", function(req, res) {
       res.json(friends); 
       //to display json of all possible friends 
     });
-  
-    // API POST Requests
-    // Below code handles when a user submits a form and thus submits(POSTS) data to the server.
-    // In each of the below cases, when a user submits form data (a JSON object)
-    // ...the JSON is pushed to the appropriate JavaScript array
-  // Then the server saves the data to the codeBuddies array)
+    // API POST Requests--when a user submits a form and thus submits(POSTS) data to the server.
+    //the JSON is pushed to the JS array, save data to codeBuddies array 
     app.post("/api/tables", function(req, res) {
       // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
       // It will do this by sending out the value "true" have a table
@@ -34,3 +27,14 @@ module.exports = function(app) {
     });
 
 } 
+
+
+
+
+//LOGIC
+//10 survey questions 
+//user takes survey. response saved as numbers. use that data for 
+//compatability logic equation 
+//then, choose best match based off equation
+//display pic and name to screen (modal popup)
+
