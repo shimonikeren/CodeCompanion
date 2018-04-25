@@ -1,6 +1,7 @@
 //----------------------DEPENDENCIES----------------------
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require("path");
 
 //-----------------CREATE EXPRESS SERVER -----------------
 var app = express();
@@ -15,6 +16,9 @@ app.use(bodyParser.json());
 //------------------------ROUTER---------------------------
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
+
+//-----------------ACCES FILES IN 'PUBLIC'-----------------
+app.use(express.static(path.join(__dirname + '/app/public')));
 
 //----------------------LISTENER---------------------------
 app.listen(PORT, function() {

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" rel="stylesheet" href="style.css">
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -82,6 +82,8 @@
 <!--hidden modal here to pop up, last-->
 
 
+
+
 <script type="text/javascript">
 //onclick submit, post answers to api routes. THEN wait for apirRoutes to do the logic and send results back to this survey page. 
 //THEN display results 
@@ -117,8 +119,8 @@ $("#submit").on("click", function(event) {
           scores: [
             $("#question1").val(),
             $("#question2").val(),
-            // $("#question3").val(),
-            // $("#question4").val(),
+            $("#question3").val(),
+            $("#question4").val()
             // $("#question5").val(),
             // $("#question6").val(),
             // $("#question7").val(),
@@ -133,6 +135,12 @@ $("#submit").on("click", function(event) {
         $.post("/api/friends", userData, function(data) {
             //THEN wait for data to come back from server after logic is done
            //then  Show the modal with the best match with modal
+           
+           if (data){
+            console.log(data);
+            alert('You Matched with:' + data.name);
+            // display modal with name and pic 
+          }
         }); 
       } 
     });

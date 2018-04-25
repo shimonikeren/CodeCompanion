@@ -1,10 +1,16 @@
 //-----------------------DATA-------------------------
-/*this file holds objects for each survey taker 
-survey info as an array of objects to be formatted as follows:
-var user1 = [{q1: "", q2: "", q3: "", q4: "", q5: "", q6: "",q7: "", q8: "", q9: "", q10: ""}]; */
-   
-//----------------Star with empty array---------------
-var codeBuddies = [];
+var codeBuddies = [
+    {
+        name: "test",
+        img: "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg",
+        scores: ["1", "2", "3", "4"]
+    },
+    {
+        name: "test222222222",
+        img: "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg",
+        scores: ["1", "1", "1", "1"]
+    }
+];
 
 module.exports = codeBuddies;
   
