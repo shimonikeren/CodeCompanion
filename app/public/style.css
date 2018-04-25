@@ -21,3 +21,7 @@ body {
 .question {
     padding: 2px;
 }
+
+h4 {
+    text-align: left;
+}
