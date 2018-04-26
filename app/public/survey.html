@@ -11,7 +11,12 @@
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
 </head>
 <body>
- 
+<style>
+    .mainDiv { border: 1px dotted grey; margin-top: 80px; color: grey; text-align: center; padding: 20px; background-color:white;}
+    .btn {border-radius: 0;}
+    .question {padding: 2px;}
+    h4 {text-align: left;}
+</style>
         
 
 <div class="container mainDiv">
@@ -147,26 +152,25 @@
                     </select>
             </div>
 
-<br>
-            <button type="button" class="btn btn-secondary btn-lg" id="submit">Submit Answers</button>    
+            <br><button type="button" class="btn btn-secondary btn-lg" id="submit">Submit Answers</button>    
 
         </div>
         <div class="col-sm-2"></div>
      </div>
 </div> <!--ends main div-->
 
-<!--hidden modal here to pop up, last-->
+<!--hidden modal here to pop up following compatability logic-->
 <div class="modal" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title"><!--name to go here--></h5>
+              <h5 class="modal-title"><!--match to go here--></h5>
             </div>
             <div class="modal-body">
-              <p><!--img to go here--></p>
+              <p><!--match img to go here--></p>
             </div>
             <div class="modal-footer">
-                    <a href="/home"><button type="button" class="btn btn-secondary">Return to Home</button></a>
+                    <a href="/home"><button type="button" class="btn btn-secondary">Return to Home Page</button></a>
             </div>
           </div>
         </div>
@@ -191,7 +195,6 @@ $("#submit").on("click", function(event) {
         return isValid;
       }
       if (validateForm()){
-        // Create an object for the user"s data
         var userData = {
           name: $("#name").val(),
           photo: $("#photo").val(),
@@ -210,8 +213,7 @@ $("#submit").on("click", function(event) {
         };
         // AJAX post the data to the friends API.
         $.post("/api/friends", userData, function(data) {   
-           if (data){
-            // display modal with name and pic of best match 
+           if (data){ 
             $('#myModal').modal('toggle');
             $('.modal-title').append('You Matched with: ' + data.name + "!");
             $('.modal-body').append(('<img id ="imgsize" src="' + data.img + '"/>'));
@@ -225,16 +227,6 @@ $("#submit").on("click", function(event) {
       }
     });
   
-
-      
-
-
-
-
 </script>
-
-
-
-
 </body>
 </html>

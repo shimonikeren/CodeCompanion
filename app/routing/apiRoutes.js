@@ -35,7 +35,6 @@ module.exports = function(app) {
       }
       res.json(match);
     
-
       //push newUserData to list of friends (codeBuddies)
       codeBuddies.push(newUserData);
       console.log("all users:" + JSON.stringify(codeBuddies));
