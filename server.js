@@ -18,7 +18,8 @@ require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 //-----------------ACCESS FILES IN 'PUBLIC'-----------------
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use('/public',express.static('public'));
 
 //-----------------------LISTENER---------------------------
 app.listen(PORT, function() {
