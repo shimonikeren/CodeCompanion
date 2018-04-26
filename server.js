@@ -9,17 +9,16 @@ var app = express();
 //------------------------PORT----------------------------
 var PORT = process.env.PORT || 8080;
 
-//----------------- SET UP DATA PARSING ------------------
+//------------------ SET UP DATA PARSING -------------------
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//------------------------ROUTER---------------------------
+//-----------------ACCESS FILES IN 'PUBLIC'-----------------
+//app.use(express.static('public'));
+
+//-------------------------ROUTER---------------------------
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
-
-//-----------------ACCESS FILES IN 'PUBLIC'-----------------
-// app.use(express.static('public'));
-app.use('/public',express.static('public'));
 
 //-----------------------LISTENER---------------------------
 app.listen(PORT, function() {
