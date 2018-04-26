@@ -17,10 +17,10 @@ app.use(bodyParser.json());
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
-//-----------------ACCES FILES IN 'PUBLIC'-----------------
-app.use(express.static(path.join(__dirname + '/app/public')));
+//-----------------ACCESS FILES IN 'PUBLIC'-----------------
+app.use(express.static('assets'))
 
-//----------------------LISTENER---------------------------
+//-----------------------LISTENER---------------------------
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });

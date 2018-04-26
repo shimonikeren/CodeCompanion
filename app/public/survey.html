@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
  
@@ -25,8 +26,8 @@
             <hr>
 
             <div class="input-field">
-                    <h5>questionksdnfksjdfgn 1</h5>
-                    <select class ="question" id="question1" required>
+                    <h5>1.	I prefer coding while listening to loud music than to silence.</h5>
+                    <select class ="chosen-select" id="question1" required>
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -37,8 +38,8 @@
             </div>
 
             <div class="input-field">
-                    <h5>questionksdnfksjdfgn 2</h5>
-                    <select class ="question" id="question2">
+                    <h5>2.	I ALWAYS psuedocode before starting a project.</h5>
+                    <select class = "chosen-select" id="question2">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -49,8 +50,8 @@
             </div>
 
             <div class="input-field">
-                    <h5>questionksdnfksjdfgn 3</h5>
-                    <select class ="question"  id="question3">
+                    <h5>3.	I like to code early in the morning over latenight.</h5>
+                    <select class = "chosen-select" id="question3">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -61,8 +62,8 @@
             </div>
 
             <div class="input-field">
-                    <h5>questionksdnfksjdfgn 4</h5>
-                    <select class ="question" id="question4">
+                    <h5>4.	I like to code outdoors rather than indoors.</h5>
+                    <select class = "chosen-select" id="question4">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -72,6 +73,79 @@
                     </select>
             </div>
 
+            <div class="input-field">
+                    <h5>5.	I prefer mac computers over windows.</h5>
+                    <select class = "chosen-select" id="question5">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+            </div>
+
+            <div class="input-field">
+                    <h5>6.	Gif is pronounced JIF!</h5>
+                    <select class = "chosen-select" id="question6">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+            </div>
+
+            <div class="input-field">
+                    <h5>7.	I prefer plain javascript to jQuery. </h5>
+                    <select class = "chosen-select" id="question7">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+            </div>
+
+            <div class="input-field">
+                    <h5>8.	I prefer bootstrap to css grid.</h5>
+                    <select class = "chosen-select" id="question8">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+            </div>
+
+            <div class="input-field">
+                    <h5>9.	I like to code solo rather than in a group.</h5>
+                    <select class = "chosen-select" id="question9">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+            </div>
+
+            <div class="input-field">
+                    <h5>10.	 I lose all concept of time while coding. </h5>
+                    <select class = "chosen-select" id="question10">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+            </div>
+
+<br>
             <button type="button" class="btn btn-secondary btn-lg" id="submit">Submit Answers</button>    
 
         </div>
@@ -80,15 +154,23 @@
 </div> <!--ends main div-->
 
 <!--hidden modal here to pop up, last-->
-
-
-
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"><!--name to go here--></h5>
+            </div>
+            <div class="modal-body">
+              <p><!--img to go here--></p>
+            </div>
+            <div class="modal-footer">
+                    <a href="/home"><button type="button" class="btn btn-secondary">Return to Home</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
 <script type="text/javascript">
-//onclick submit, post answers to api routes. THEN wait for apirRoutes to do the logic and send results back to this survey page. 
-//THEN display results 
-
-// Capture the form inputs
 $("#submit").on("click", function(event) {
       event.preventDefault();
       // Form validation
@@ -99,19 +181,14 @@ $("#submit").on("click", function(event) {
             isValid = false;
           }
         });
-        // $(".question").each(function() {
-        //   if ($(this).val() === "") {
-        //     isValid = false;
-        //   }
-        // });
-        //TO DO: Require each drop down question to be answered!~~~~~~~~~~~
+        $(".chosen-select").each(function() {
+        if ($(this).val() === "") {
+            isValid = false;
+        }
+        });
         return isValid;
       }
-      if (validateForm()==false){
-          alert("Please fill out all questions in order to continue");
-      }
-      else
-      {
+      if (validateForm()){
         // Create an object for the user"s data
         var userData = {
           name: $("#name").val(),
@@ -120,31 +197,35 @@ $("#submit").on("click", function(event) {
             $("#question1").val(),
             $("#question2").val(),
             $("#question3").val(),
-            $("#question4").val()
-            // $("#question5").val(),
-            // $("#question6").val(),
-            // $("#question7").val(),
-            // $("#question8").val(),
-            // $("#question9").val(),
-            // $("#question10").val()
+            $("#question4").val(),
+            $("#question5").val(),
+            $("#question6").val(),
+            $("#question7").val(),
+            $("#question8").val(),
+            $("#question9").val(),
+            $("#question10").val()
           ]
         };
-        console.log(userData); //checking that info was grabbed 
-
         // AJAX post the data to the friends API.
-        $.post("/api/friends", userData, function(data) {
-            //THEN wait for data to come back from server after logic is done
-           //then  Show the modal with the best match with modal
-           
+        $.post("/api/friends", userData, function(data) {   
            if (data){
-            console.log(data);
-            alert('You Matched with:' + data.name);
-            // display modal with name and pic 
+            // display modal with name and pic of best match 
+            $('#myModal').modal('toggle');
+            $('.modal-title').append('You Matched with: ' + data.name + "!");
+            $('.modal-body').append(('<img id ="imgsize" src="' + data.img + '"/>'));
+            $('#imgsize').width(300); 
+            $('#imgsize').height(300);  
           }
         }); 
       } 
+      else{
+          alert("Please fill out all questions in order to continue");
+      }
     });
   
+
+      
+
 
 
 
