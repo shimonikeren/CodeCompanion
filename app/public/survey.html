@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/assets/style.css">
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 </head>
-<body background="assets/code.jpeg">
+<body>
  
         
 
@@ -30,7 +30,7 @@
             <div class="input-field">
                     <h5>1.	I prefer coding while listening to loud music than to silence.</h5>
                     <select class ="chosen-select" id="question1" required>
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -42,7 +42,7 @@
             <div class="input-field">
                     <h5>2.	I ALWAYS psuedocode before starting a project.</h5>
                     <select class = "chosen-select" id="question2">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -54,7 +54,7 @@
             <div class="input-field">
                     <h5>3.	I like to code early in the morning over latenight.</h5>
                     <select class = "chosen-select" id="question3">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -66,7 +66,7 @@
             <div class="input-field">
                     <h5>4.	I like to code outdoors rather than indoors.</h5>
                     <select class = "chosen-select" id="question4">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -78,7 +78,7 @@
             <div class="input-field">
                     <h5>5.	I prefer mac computers over windows.</h5>
                     <select class = "chosen-select" id="question5">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -90,7 +90,7 @@
             <div class="input-field">
                     <h5>6.	Gif is pronounced JIF!</h5>
                     <select class = "chosen-select" id="question6">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -102,7 +102,7 @@
             <div class="input-field">
                     <h5>7.	I prefer plain javascript to jQuery. </h5>
                     <select class = "chosen-select" id="question7">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -114,7 +114,7 @@
             <div class="input-field">
                     <h5>8.	I prefer bootstrap to css grid.</h5>
                     <select class = "chosen-select" id="question8">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -126,7 +126,7 @@
             <div class="input-field">
                     <h5>9.	I like to code solo rather than in a group.</h5>
                     <select class = "chosen-select" id="question9">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -138,7 +138,7 @@
             <div class="input-field">
                     <h5>10.	 I lose all concept of time while coding. </h5>
                     <select class = "chosen-select" id="question10">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="">Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -179,12 +179,12 @@ $("#submit").on("click", function(event) {
       function validateForm() {
         var isValid = true;
         $(".form-control").each(function() {
-          if ($(this).val() === "") {
+            if ($(this).val() === "") {
             isValid = false;
           }
         });
         $(".chosen-select").each(function() {
-        if ($(this).val() === "") {
+        if ($(this).val() === "")  {
             isValid = false;
         }
         });
