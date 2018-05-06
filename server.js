@@ -1,7 +1,6 @@
 //----------------------DEPENDENCIES----------------------
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path");
 
 //-----------------CREATE EXPRESS SERVER -----------------
 var app = express();
@@ -14,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //-----------------ACCESS FILES IN 'PUBLIC'-----------------
-//app.use(express.static('public'));
+app.use(express.static("app/public"));
 
 //-------------------------ROUTER---------------------------
 require("./app/routing/apiRoutes")(app);

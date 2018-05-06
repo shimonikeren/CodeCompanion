@@ -10,7 +10,6 @@ module.exports = function(app) {
     app.post("/api/friends", function(req, res) {
       var newUserData = req.body;
       var newUserScore = req.body.scores;
-      console.log("scores " + newUserScore)
       var bestMatch = {};
       var differenceArray =[];
       for(var j = 0; j < codeBuddies.length; j++){
@@ -22,7 +21,6 @@ module.exports = function(app) {
         }
         codeBuddies[j].difference = difference;
         differenceArray.push(difference);
-        console.log(differenceArray);
       }
      
       var matchCalc = Math.min(...differenceArray);
@@ -37,7 +35,7 @@ module.exports = function(app) {
     
       //push newUserData to list of friends (codeBuddies)
       codeBuddies.push(newUserData);
-      console.log("all users:" + JSON.stringify(codeBuddies));
+      console.log("all users now in db:" + JSON.stringify(codeBuddies));
 
     });
 } 

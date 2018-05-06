@@ -8,18 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+    <link rel="stylesheet" href="/style.css" type="text/css" />
 </head>
-<body>
-<style>
-    .mainDiv { border: 1px dotted grey; margin-top: 80px; color: grey; text-align: center; padding: 20px; background-color:white;}
-    .btn {border-radius: 0;}
-    .question {padding: 2px;}
-    h4 {text-align: left;}
-</style>
-        
+<body id="surveyBody">
 
-<div class="container mainDiv">
+        
+<div class="container mainDiv surveyDiv">
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
@@ -167,7 +161,8 @@
               <h5 class="modal-title"><!--match to go here--></h5>
             </div>
             <div class="modal-body">
-              <p><!--match img to go here--></p>
+            <!--match img to go here-->
+            <img id="modal-photo" src="" alt="Match Photo">
             </div>
             <div class="modal-footer">
                     <a href="/home"><button type="button" class="btn btn-secondary">Return to Home Page</button></a>
@@ -197,7 +192,7 @@ $("#submit").on("click", function(event) {
       if (validateForm()){
         var userData = {
           name: $("#name").val(),
-          photo: $("#photo").val(),
+          img: $("#photo").val(),
           scores: [
             $("#question1").val(),
             $("#question2").val(),
@@ -216,7 +211,8 @@ $("#submit").on("click", function(event) {
            if (data){ 
             $('#myModal').modal('toggle');
             $('.modal-title').append('You Matched with: ' + data.name + "!");
-            $('.modal-body').append(('<img id ="imgsize" src="' + data.img + '"/>'));
+            $('#modal-photo').attr("src", data.img);
+            $('#modal-photo').attr("id", "imgsize");
             $('#imgsize').width(300); 
             $('#imgsize').height(300);  
           }

@@ -1,8 +1,12 @@
-body { 
+#homeBody { 
     background-image: url("code.jpeg");
     height: 100%; 
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#surveyBody {
+    background-color:rgb(189, 199, 210);
 }
 
 .mainDiv {
@@ -13,6 +17,10 @@ body {
     padding: 20px;
     background-color:white;
 }
+
+/* .input-field {
+    float: left;
+} */
 
 .btn {
     border-radius: 0;
