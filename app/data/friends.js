@@ -3,7 +3,7 @@ var codeBuddies = [
     {
         name: "Angie",
         img: "https://s.yimg.com/ny/api/res/1.2/r4Y_eBV3jZ7bKzeiFhRl.g--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NjMwO2lsPXBsYW5l/http://l.yimg.com/os/publish-images/news/2015-08-25/17832380-4b08-11e5-8deb-7bb02a6f13e6_25prog.jpg",
-        scorßes: ["1", "2", "3", "4", "1", "2", "3", "4", "5", "5"]
+        scores: ["1", "2", "3", "4", "1", "2", "3", "4", "5", "5"]
     },
     {
         name: "Taylor",
